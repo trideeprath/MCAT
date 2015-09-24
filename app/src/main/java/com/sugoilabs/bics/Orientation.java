@@ -63,6 +63,7 @@ public class Orientation extends ActionBarActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orientation);
         showInstructionDialogBox();
+        //Initializing
         initializeLayouts();
     }
 
