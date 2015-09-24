@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcomeScreen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/welcome_background"
+    android:orientation="vertical"
+    tools:context=".Welcome">
+
+
+    <LinearLayout
+        android:id="@+id/BICS_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/BICS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:shadowColor="@color/icons"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="1"
+            android:text="@string/bics"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/welcome_text_size"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/brainIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/welcom_screen_logo_black_border"
+            android:layout_marginTop="32dp"/>
+
+        <!--
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:shadowColor="@color/icons"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="2"
+            android:text="Suresh Kumar MD \n Board certified Neurologist treating TBI last 4 years.\n Research presented and accepted By American Medical Informatics Association, Washington DC April 2015. \n Traumatic Brain Injury conference Washington DC April 2015"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/welcome_text_size" />
+
+          -->
+
+        <!--
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="40dp"
+            android:gravity="left"
+            android:shadowColor="@color/icons"
+            android:text="@string/doctor_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:text="Board Certified in Neurology &amp; Headache \nDirector of Neuro-Headaches TBI &amp; Cognitive Center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="24dp"
+            android:gravity="left"
+            android:shadowColor="@color/icons"
+            android:text="Cognitive test developed after research presented and accept in \nAmerican Academy of Neurology 2015 \nTBI Conference of America 2015 \nAmerican Medical Informatics Association 2015"
+            android:textColor="@color/icons"
+            android:textSize="15sp"/>
+        -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="24dp"
+            android:gravity="left"
+            android:shadowColor="@color/icons"
+            android:text="BCT was Developed after comprehensive Research presented and accepted by: \nAmerican Academy of Neurology 2015 \nAmerican Medical Informatics Association 2015 \nTBI Conference of America 2015 \n"
+            android:textColor="@color/icons"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="40dp"
+            android:gravity="left"
+            android:shadowColor="@color/icons"
+            android:text="@string/doctor_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="left"
+            android:text="Board Certified in Neurology &amp; Headache Medicine\nDirector of Headache, TBI &amp; Cognitive Research Institute"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/disclaimer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:text="@string/read_disclaimer"
+            android:textColor="@color/red_dark"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/get_started_button_background"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Agree and Start"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.Step1">
+
+    <!--
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:elevation="5dp"></include>
+     -->
+
+    <LinearLayout
+        android:id="@+id/pre_post_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:text="@string/pre_post_injury_question"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/normal_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:background="@color/divider"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_pre_post_injury"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radio_pre_injury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Pre-Injury Screening Test" />
+
+            <RadioButton
+                android:id="@+id/radio_post_injury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post-Injury Screening Test" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/pre_post_test"
+        android:id="@+id/step1question1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/step1_question1"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/normal_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:background="@color/divider"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/q1_button_yes"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/q1_button_no"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/step1question2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1question1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/step1_question2"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/normal_text_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:background="@color/divider"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/q2_button_yes"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/q2_button_no"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/step1_button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1question2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/step1_done_background"
+        android:paddingBottom="16dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="16dp"
+        android:text="DONE"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:visibility="invisible"
+        android:textSize="20sp">
+        <!-- android:background="@drawable/login_background"  -->
+        <!--  android:background="@android:drawable/list_selector_background" -->
+    </Button>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/step1question1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="659dp"
+        android:layout_marginStart="659dp" />
+
+
+</RelativeLayout>

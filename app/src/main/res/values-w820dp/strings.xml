@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="group_matching">Group Matching</string>
+    <string name="reverseNumberRecallInstruction">Combination of the numbers will be spoken. You have to remember and type or speak the numbers in Reverse order. Eg Spoken 789 you will  enter 987 .</string>
+    <string name="groupMatchingInstruction">Drag the words that belong to the similar group or has an association.</string>
+    <string name="type_number">Type the number</string>
+    <string name="next_story">NEXT STORY</string>
+    <string name="delayedRecallStoryOneInstruction">Try to recall the Story 1: Vacation Home. Speak or Type the phrase or story you heard as much as in the same word.</string>
+    <string name="delayedRecallStoryTwoInstruction">Try to recall the Story 2 Mary Lawmower. Speak or Type the phrase or story you heard as much as in the same words.</string>
+    <string name="visual_name_immediate_recall_new">Immediate Visual Picture Recall</string>
+    <string name="auditory_immediate_recall_new">Immediate Word Recall</string>
+    <string name="auditory_immediate_recall_story_new">Immediate Auditory Recall Story</string>
+    <string name="visual_cognitive_attention_task_new">Cognitive Processing connect the dot</string>
+    <string name="number_recall_new">Immediate Number Recall</string>
+    <string name="visual_recall_immediate_task_new">Immediate Visual Drawing Recall</string>
+    <string name="visual_spatial_immedite_task_new">Immediate Visual Spatial Select Picture</string>
+    <string name="number_recall_reverse_new">Attention Auditory Reverse Number Recall</string>
+    <string name="declaratory_language_memory_new">Semantic Color Score</string>
+    <string name="group_matching_new">Semantic Group Matching</string>
+    <string name="visual_name_delayed_recall_new">Delayed Visual Picture Recall</string>
+    <string name="dis_inhibition_attention_new">Disinhibition V Tap</string>
+    <string name="delayed_story_recall_new">Delayed Auditory Story Recall</string>
+    <string name="visual_motor_coordination_new">Disinhibition V Tap</string>
+    <string name="auditory_delayed_recall_new">Delayed Auditory Word Recall</string>
+</resources>

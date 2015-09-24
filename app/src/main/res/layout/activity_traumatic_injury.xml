@@ -1,0 +1,198 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.Step1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"
+            android:elevation="5dp"></include>
+            -->
+
+        <LinearLayout
+            android:id="@+id/traumatic_injury_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_bar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/step1_question_background"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/traumatic_injury_question1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1sp"
+                android:background="@color/divider"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_injury_occurrence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio2day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Within two Day" />
+
+                <RadioButton
+                    android:id="@+id/radio1Week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withing in 1 Week" />
+
+                <RadioButton
+                    android:id="@+id/radio3Months"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withing in 3 months" />
+
+                <RadioButton
+                    android:id="@+id/radio12Months"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withing in 12 months" />
+
+                <RadioButton
+                    android:id="@+id/radioMoreThan12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More than 12 Months" />
+
+                <RadioButton
+                    android:id="@+id/radioNoInjury"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Head injury" />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/traumatic_injury_difference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/traumatic_injury_question"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/step1_question_background"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/traumatic_injury_question2"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1sp"
+                android:background="@color/divider"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_injury_difference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_diff_nodiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="No" />
+
+                <RadioButton
+                    android:id="@+id/radio_diff_1week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="One Week" />
+
+                <RadioButton
+                    android:id="@+id/radio_diff_2week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Two Weeks" />
+
+                <RadioButton
+                    android:id="@+id/radio_diff_1month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="One Month" />
+
+                <RadioButton
+                    android:id="@+id/radio_diff_3month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Three Months" />
+
+                <RadioButton
+                    android:id="@+id/radio_diff_6month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More than 6 Months" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/traumatic_injury_button_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/traumatic_injury_difference"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp">
+            <!-- android:background="@drawable/login_background"  -->
+            <!--  android:background="@android:drawable/list_selector_background" -->
+        </Button>
+
+
+    </RelativeLayout>
+
+</ScrollView>

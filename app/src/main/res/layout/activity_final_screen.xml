@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sugoilabs.bics.FinalScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        android:paddingTop="32dp"
+        android:gravity="center"
+        android:background="@color/primary_dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bics_screening_result"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/step1_question_background"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/result_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have scored 12 in BICS Screening Text "
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/primary_dark"
+            android:layout_centerInParent="true"
+            android:paddingBottom="48dp"/>
+
+        <TextView
+            android:id="@+id/caution_resulttextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/red_dark"
+            android:textSize="16sp"
+            android:paddingBottom="32dp"/>
+
+     </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/select_shapes_square_triangle_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="32dp">
+        <Button
+            android:id="@+id/final_report_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/view_report"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></Button>
+
+        <Button
+            android:id="@+id/final_exit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/exit"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

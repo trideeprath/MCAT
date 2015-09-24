@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.GroupMatching">
+
+    <LinearLayout
+        android:id="@+id/group_matching_button_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/group_matching_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="Paris"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/group_matching_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="Rome"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/group_matching_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="New York"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/group_matching_button_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_matching_button_line1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/group_matching_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="Inch"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/group_matching_button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="Pound"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/group_matching_button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/group_matching_buttons"
+            android:padding="8dp"
+            android:text="Litre"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/group_matching_containers"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/group_matching_button_line2"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/group_matching_container_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@color/lime_yellow"
+            android:orientation="vertical"
+            android:tag="container_one"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/group_matching_group1_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:gravity="center"
+                android:text="Drag Here For Group One"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_matching_container_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:background="@color/lime_yellow"
+            android:orientation="vertical"
+            android:tag="container_two"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/group_matching_group2_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drag Here For Group Two"
+                android:textColor="@color/white"
+                android:layout_marginTop="160dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/group_matching_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="@drawable/step2_button_background"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/next"
+        android:textColor="#ffffff"
+        android:textSize="20sp"></Button>
+
+
+</RelativeLayout>

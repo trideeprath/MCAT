@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="orientation_questions">
+        <item>How Old are you ?</item>
+        <item>What state do you live in ? </item>
+        <item>What was the day of the week, the day before yesterday ?</item>
+        <item>What is the date of the month tomorrow ?</item>
+        <item>What day of the week is Thanksgiving day celebrated in USA ?</item>
+        <item>What was the last year you observed new year eve ?</item>
+        <item>At what speed  do you drive on interstate highway in mile per hour ?</item>
+        <item>Los Angeles is in which state ?</item>
+        <item>What is the capital of USA ?</item>
+        <item>Eiffel tower is in which city ?</item>
+    </string-array>
+
+
+    <string-array name="orientation_questions1">
+        <item>How Old are you ?</item>
+        <item>What state do you live in ? </item>
+        <item>What was the day of the week, the day before yesterday ?</item>
+        <item>What is the date of the month tomorrow ?</item>
+        <item>At what speed  do you drive on interstate highway in mile per hour ?</item>
+        <item>What day of the week is Thanksgiving day celebrated in USA ?</item>
+        <item>What was the last year you observed new year eve ?</item>
+        <item>Los Angeles is in which state ?</item>
+        <item>What is the capital of USA ?</item>
+        <item>Eiffel tower is in which city ?</item>
+    </string-array>
+
+
+
+    <string-array name="orientation_answers">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+</resources>

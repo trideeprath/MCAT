@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DrawingActivity"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/primary_dark"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/rectangle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:onClick="rectangleClicked"
+            android:src="@drawable/rectangle_with_text"
+            android:scaleType="centerCrop"/>
+
+        <ImageButton
+            android:id="@+id/line"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/minus104_with_text"
+            android:onClick="lineClicked"
+            android:scaleType="centerCrop"/>
+
+        <ImageButton
+            android:id="@+id/undo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/recycle_with_text"
+            android:onClick="undoClicked"
+            android:scaleType="centerCrop"/>
+
+     </LinearLayout>
+
+
+    <com.sugoilabs.bics.DrawView
+        android:id="@+id/drawing"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"/>
+
+
+
+    <Button
+        android:id="@+id/shape_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/step2_button_background"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/next"
+        android:onClick="shapeNextClicked"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"></Button>
+
+
+
+</LinearLayout>

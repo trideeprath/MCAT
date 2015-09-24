@@ -1,0 +1,403 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.Step2">
+
+    <!--
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:elevation="5dp"></include>
+      -->
+
+    <LinearLayout
+        android:id="@+id/delayed_recall_story_answer_answer_layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+        <EditText
+            android:id="@+id/delayed_recall_story_answer_answers_textview_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/red_dark"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+
+
+    <!--
+    <LinearLayout
+        android:id="@+id/picture_flash_immediate_answer_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_typein"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/type"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_speakout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/speak"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    -->
+
+    <LinearLayout
+        android:id="@+id/delayed_recall_story_answer_start_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delayed_recall_story_answer_answer_layout_tab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/drst_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/none"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_weight="1"></Button>
+
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_weight="1"></Button>
+
+    </LinearLayout>
+
+
+
+    <!-- android:background="@drawable/login_background"  -->
+    <!--  android:background="@android:drawable/list_selector_background" -->
+
+    <LinearLayout
+        android:id="@+id/drst_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delayed_recall_story_answer_start_done"
+        android:background="@drawable/step1_question_background"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Mary"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/drst_word2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Loaned"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Lawnmower"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/drst_word4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Shovel"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Weed Spray"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/drst_word6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Gloves"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Nephew"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/drst_word8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Last Year"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Returned"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/drst_word10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Loan"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/drst_word11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Every Other"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/drst_word12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/get_started_button_background"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Visit"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

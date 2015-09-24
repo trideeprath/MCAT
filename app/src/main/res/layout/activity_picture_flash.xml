@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.Step2">
+
+
+    <LinearLayout
+        android:id="@+id/picture_flash_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/picture_flash_image_view"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/cow" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/picture_flash_start_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picture_flash_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/picture_flash_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/restart"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:visibility="invisible"></Button>
+
+        <Button
+            android:id="@+id/picture_flash_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:visibility="invisible"></Button>
+
+
+    </LinearLayout>
+
+    <!-- android:background="@drawable/login_background"  -->
+    <!--  android:background="@android:drawable/list_selector_background" -->
+
+
+</RelativeLayout>
+
+

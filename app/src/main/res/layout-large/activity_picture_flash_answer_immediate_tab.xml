@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sugoilabs.bics.Step2">
+
+    <!--
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:elevation="5dp"></include>
+      -->
+
+    <LinearLayout
+        android:id="@+id/picture_flash_immediate_answer_answer_layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+        <EditText
+            android:id="@+id/picture_flash_immediate_answer_answers_textview_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/red_dark"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+
+
+    <!--
+    <LinearLayout
+        android:id="@+id/picture_flash_immediate_answer_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_typein"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/type"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_speakout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/speak"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    -->
+
+    <LinearLayout
+        android:id="@+id/picture_flash_immediate_answer_start_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picture_flash_immediate_answer_answer_layout_tab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/step1_question_background"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/pfait_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginRight="8dp"
+            android:text="NONE"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_weight="1"></Button>
+
+
+        <Button
+            android:id="@+id/picture_flash_immediate_answer_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/step2_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_weight="1"></Button>
+
+
+
+    </LinearLayout>
+
+
+
+    <!-- android:background="@drawable/login_background"  -->
+    <!--  android:background="@android:drawable/list_selector_background" -->
+
+    <LinearLayout
+        android:id="@+id/pfia_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picture_flash_immediate_answer_start_done"
+        android:background="@drawable/step1_question_background"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/pfait_word1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/get_started_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="BIRD"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/pfait_word2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/get_started_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="COW"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+        <Button
+            android:id="@+id/pfait_word3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/get_started_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="BOAT"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+        <Button
+            android:id="@+id/pfait_word4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/get_started_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="120dp"
+            android:paddingRight="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="KEY"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/pfait_word5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/get_started_button_background"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="120dp"
+             android:paddingRight="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:text="TREE"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

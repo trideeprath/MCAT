@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background"
+    tools:context="com.sugoilabs.bics.Registration">
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:shadowColor="@color/icons"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="1"
+        android:text="Patient Details"
+        android:textColor="@color/icons"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/textview_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/textview_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Email"
+        android:textSize="24sp"
+        android:inputType="textEmailAddress"
+        android:padding="16dp" />
+
+
+    <TextView
+        android:id="@+id/user_details_missing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_email"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Please fill details correctly"
+        android:textColor="@color/red_dark"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+
+    <Button
+        android:id="@+id/user_detail_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/get_started_button_background"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="32sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
