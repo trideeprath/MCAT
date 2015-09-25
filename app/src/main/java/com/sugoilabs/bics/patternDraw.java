@@ -173,8 +173,8 @@ public class patternDraw extends Activity implements View.OnClickListener {
     }
 
     private void setButtonArrayList() {
-        buttonArrayList.add((Button)findViewById(R.id.pattern_buttonN));
-        buttonArrayList.add((Button)findViewById(R.id.pattern_buttonO));
+        buttonArrayList.add((Button) findViewById(R.id.pattern_buttonN));
+        buttonArrayList.add((Button) findViewById(R.id.pattern_buttonO));
         buttonArrayList.add((Button)findViewById(R.id.pattern_button9));
         buttonArrayList.add((Button)findViewById(R.id.pattern_button8));
         buttonArrayList.add((Button)findViewById(R.id.pattern_buttonM));
@@ -298,15 +298,64 @@ public class patternDraw extends Activity implements View.OnClickListener {
         }
         */
         //The following code is non time based scoring
+        /*
         if(stringBuilder.toString().equals("5K6L7M8N9O10P") ||stringBuilder.toString().equals("L7M8N9O10P") || stringBuilder.toString().equals("6L7M8N9O10P")  ) {
-            points = 5;
+            points = 10;
         }
-        else{
-            points=0;
+        */
+
+        String firstAnswer = "5K6L7M8N9O10P"; //12
+        String secondAnswer = "L7M8N9O10P";   //9
+        String thirdAnswer = "6L7M8N9O10P";   //10
+
+        String answer = stringBuilder.toString();
+
+        if(answer.charAt(0)=='5'){
+            for(int x =0; x < answer.length() ; x++){
+                if(answer.charAt(x) == firstAnswer.charAt(x)){
+                    points++;
+                }
+            }
         }
+        else if(answer.charAt(0) == 'L'){
+            points++;
+            for(int x =0; x < answer.length() ; x++){
+                if(answer.charAt(x) == secondAnswer.charAt(x)){
+                    points++;
+                }
+            }
+        }
+        else if(answer.charAt(0) == '6') {
+            for(int x =0; x < answer.length() ; x++){
+                if(answer.charAt(x) == thirdAnswer.charAt(x)){
+                    points++;
+                }
+            }
+        }
+        else {
+            points =0;
+        }
+        /*
+        else if(stringBuilder.toString().equals("5K") ||stringBuilder.toString().equals("L7") || stringBuilder.toString().equals("6L")){
+            points =1;
+        }
+        else if(stringBuilder.toString().equals("5K6") ||stringBuilder.toString().equals("L7M") || stringBuilder.toString().equals("6L7")  ) {
+            points = 2;
+        }
+        else if(stringBuilder.toString().equals("5K6L") ||stringBuilder.toString().equals("L7M8") || stringBuilder.toString().equals("6L7M")  ) {
+            points = 3;
+        }
+        else if(stringBuilder.toString().equals("5K6L7") ||stringBuilder.toString().equals("L7M8N") || stringBuilder.toString().equals("6L7M8")  ) {
+            points = 4;
+        }
+        else if(stringBuilder.toString().equals("5K6L7M") ||stringBuilder.toString().equals("L7M8N9O10P") || stringBuilder.toString().equals("6L7M8N9O10P")  ) {
+            points = 10;
+        }
+        */
 
-
-
+        if(points >10){
+            points =10;
+        }
 
         return points;
     }
@@ -326,7 +375,7 @@ public class patternDraw extends Activity implements View.OnClickListener {
         }
         */
         double totalScore=0;
-        points = points *2;
+        points = points ;
         if(scoreSharedPreference.contains("score")){
             totalScore = Double.valueOf(scoreSharedPreference.getString("score","0")) + Integer.valueOf(points);
             editor.putString("score",String.valueOf(totalScore));

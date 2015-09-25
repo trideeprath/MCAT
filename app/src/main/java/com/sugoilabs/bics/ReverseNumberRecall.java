@@ -373,13 +373,16 @@ public class ReverseNumberRecall extends ActionBarActivity implements View.OnCli
 
     private int calculatePoints() {
         int point=0;
-        if(correctAnswerCount >=9){
+        if(correctAnswerCount >5){
             point = 5;
         }
         else{
             point = (int)correctAnswerCount/2;
         }
 
+        if(point >5){
+            point =5;
+        }
 
         return point;
     }

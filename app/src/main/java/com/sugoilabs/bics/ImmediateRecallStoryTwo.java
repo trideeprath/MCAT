@@ -90,6 +90,7 @@ public class ImmediateRecallStoryTwo extends ActionBarActivity implements View.O
         }
 
         buttonsLayout = (LinearLayout) findViewById(R.id.drst_button_layout);
+        buttonsLayout.setVisibility(View.INVISIBLE);
 
     }
 
