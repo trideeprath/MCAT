@@ -139,17 +139,18 @@
     <string name="title_activity_delayed_recall_story">DelayedRecallStory</string>
     <string name="delayed_story_recall">Delayed Story Recall</string>
     <string name="next_story">NEXT STORY</string>
-    <string name="delayedRecallStoryOneInstruction">Try to recall the Story 1: Vacation Home. Please press the buttons with appropriate words which is recalled.</string>
-    <string name="delayedRecallStoryTwoInstruction">Try to recall the Story 2 Mary Lawnmower. Please press the buttons with appropriate words which is recalled.</string>
+    <string name="delayedRecallStoryOneInstruction">Try to recall the Story 1. Please press the buttons with appropriate words which is recalled.</string>
+    <string name="delayedRecallStoryTwoInstruction">Try to recall the Story 2. Please press the buttons with appropriate words which is recalled.</string>
+
+    <string name="story_one_string">John,neighbour,Robert,vacation home,other month,white dog,golf club,laptop,plenty,cigar,every other,visit</string>
+    <string name="story_two_string">Mary,loaned,lawnmower,shovel,weed spray,gloves,nephew,last year,returned,loan,anything,decided</string>
+    <string name="story_three_string">John Hampton,New York,Greece,six days,friends,Christmas,vacation,4 pairs clothes,Camera,black jacket,airport,pair of gloves</string>
+    <string name="story_four_string">Rosetta Johnson,Manager,coworker,mandatory,evacuation,category 4 storm,48 hours,packed clothes,medicine,2 dogs,car,followed,route</string>
+
     <string name="title_activity_user_detail_form">UserDetailForm</string>
-    <string name="title_activity_picture_flash_answer_immediate_tab">
-        PictureFlashAnswerImmediateTab
-    </string>
-    <string name="title_activity_word_audio_flash_answer_immediate_tab">
-        WordAudioFlashAnswerImmediateTab
-    </string>
-    <string name="title_activity_picture_flash_answer_delayed_tab">PictureFlashAnswerDelayedTab
-    </string>
+    <string name="title_activity_picture_flash_answer_immediate_tab">PictureFlashAnswerImmediateTab</string>
+    <string name="title_activity_word_audio_flash_answer_immediate_tab">WordAudioFlashAnswerImmediateTab</string>
+    <string name="title_activity_picture_flash_answer_delayed_tab">PictureFlashAnswerDelayedTab</string>
     <string name="title_activity_delayed_recall_story_one">DelayedRecallStoryOne</string>
     <string name="title_activity_delayed_recall_story_two">DelayedRecallStoryTwo</string>
     <string name="title_activity_word_flash_answer_delayed">WordFlashAnswerDelayed</string>

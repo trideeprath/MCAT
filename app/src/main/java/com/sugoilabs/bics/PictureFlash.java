@@ -145,11 +145,10 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
             startActivity(nextActivity);
 
 
-            //nextActivity = new Intent(this, patternDraw.class);
+            //nextActivity = new Intent(this,StoryPlayOne.class);
             //startActivity(nextActivity);
 
 
-            //
 
             //nextActivity = new Intent(this, GroupMatching.class);
             //startActivity(nextActivity);

@@ -87,6 +87,8 @@ public class ImmediateRecallStoryTwo extends ActionBarActivity implements View.O
             identifierString = "drst_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
+            answerButtons.get(i-1).setText(storyData.answerStringArray.get(1).split(",")[i-1]);
+
         }
 
         buttonsLayout = (LinearLayout) findViewById(R.id.drst_button_layout);
@@ -120,7 +122,10 @@ public class ImmediateRecallStoryTwo extends ActionBarActivity implements View.O
             //startActivity(new Intent(this, patternDraw.class));
             //startActivity(new Intent(this, WordAudioFlash.class));
             //startActivity(new Intent(this , SimilarPicture.class));
+
             startActivity(new Intent(this, patternDraw.class));
+
+            //startActivity(new Intent(this, DelayedRecallStoryOne.class));
         }
     }
 
@@ -148,11 +153,14 @@ public class ImmediateRecallStoryTwo extends ActionBarActivity implements View.O
 
         if (audioNumber == 1) {
             baseString = "John's neighbor Robert visit his vacation home every other month, He bring white dog and golf club, Laptop and  plenty of cigars.";
-            String[] correctWords1 = {"John", "neighbour", "Robert", "vacation home", "other month", "white dog", "golf club", "laptop", "plenty", "cigar"};
+            String[] correctWords1 = storyData.answerStringArray.get(0).split(",");
+            //String[] correctWords1 = {"John", "neighbour", "Robert", "vacation home", "other month", "white dog", "golf club", "laptop", "plenty", "cigar"};
             correctWords = correctWords1;
         } else {
             baseString = "Mary had loaned her lawnmower, shovel, weed spray and pair of gloves to the her nephew, last year. Her nephew only returned Lawnmower, She decided not to loan any more.";
-            String[] correctWords1 = {"Mary", "loaned", "lawnmower,", "lawnmower", "shovel", "weed spray", "gloves", "nephew", "last year", "returned", "loan","anything","decided"};
+            String[] correctWords1 = storyData.answerStringArray.get(1).split(",");
+            //String[] correctWords1 = getResources().getString(R.string.story_two_string).split(",");
+            //String[] correctWords1 = {"Mary", "loaned", "lawnmower,", "lawnmower", "shovel", "weed spray", "gloves", "nephew", "last year", "returned", "loan","anything","decided"};
             correctWords = correctWords1;
         }
         String[] words = sentence1.split(" ");

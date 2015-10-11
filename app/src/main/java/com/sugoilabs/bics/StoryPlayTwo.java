@@ -145,7 +145,9 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
         protected Void doInBackground(String... params) {
 
             try {
-                player = MediaPlayer.create(StoryPlayTwo.this, R.raw.story_marylwanmore);
+                player = MediaPlayer.create(StoryPlayTwo.this, storyData.storyArray.get(1));
+
+                //player = MediaPlayer.create(StoryPlayTwo.this, R.raw.story_marylwanmore);
 
                 player.start();
                 audioNumber++;

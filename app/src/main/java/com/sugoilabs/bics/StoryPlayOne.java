@@ -41,6 +41,8 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_play_one);
+        storyData storyData = new storyData(this);
+        storyData.setStoryArray();
         showInstructionDialogBox();
         initializeLayouts();
 
@@ -141,8 +143,9 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
         protected Void doInBackground(String... params) {
 
             try {
-                player = MediaPlayer.create(StoryPlayOne.this, R.raw.story_johnsneighbor_robert);
 
+                //player = MediaPlayer.create(StoryPlayOne.this, R.raw.story_johnsneighbor_robert);
+                player = MediaPlayer.create(StoryPlayOne.this, storyData.storyArray.get(0));
                 player.start();
                 audioNumber++;
                 int count=0;

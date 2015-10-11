@@ -81,6 +81,7 @@ public class DelayedRecallStoryOne extends ActionBarActivity implements View.OnC
             identifierString = "drso_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
+            answerButtons.get(i-1).setText(storyData.answerStringArray.get(0).split(",")[i - 1]);
         }
 
         buttonLayout = (LinearLayout) findViewById(R.id.drso_button_layout);
@@ -168,11 +169,13 @@ public class DelayedRecallStoryOne extends ActionBarActivity implements View.OnC
 
         if (audioNumber == 1) {
             baseString = "John's neighbor Robert visit his vacation home every other month, He bring white dog and golf club, Laptop and  plenty of cigars.";
-            String[] correctWords1 = {"John", "neighbour", "Robert", "vacation home", "other month", "white dog", "golf club", "laptop", "plenty", "cigar","every other","visit"};
+            String[] correctWords1 = storyData.answerStringArray.get(0).split(",");
+            //String[] correctWords1 = {"John", "neighbour", "Robert", "vacation home", "other month", "white dog", "golf club", "laptop", "plenty", "cigar","every other","visit"};
             correctWords = correctWords1;
         } else {
             baseString = "Mary had loaned her lawnmower, shovel, weed spray and pair of gloves to the her nephew, last year. Her nephew only returned Lawnmower, She decided not to loan any more.";
-            String[] correctWords1 = {"Mary", "loaned", "lawnmower,", "lawnmower", "shovel", "weed spray", "gloves", "nephew", "last year", "returned", "loan"};
+            String[] correctWords1 = storyData.answerStringArray.get(1).split(",");
+            //String[] correctWords1 = {"Mary", "loaned", "lawnmower,", "lawnmower", "shovel", "weed spray", "gloves", "nephew", "last year", "returned", "loan"};
             correctWords = correctWords1;
         }
         String[] words = sentence1.split(" ");
