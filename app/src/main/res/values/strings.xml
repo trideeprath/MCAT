@@ -52,6 +52,9 @@
     <string name="audioWordAnswerInstruction">Recall the five words that you have been asked to remember before by clicking on the appropriate buttons.</string>
     <string name="numberRecallInstruction">Audio will play combination of the numbers, please type or speak the same number to enter.</string>
     <string name="base_word_audio_flash_answer">table,apple,money,yellow,rose</string>
+    <string name="base_word_audio_flash_answer1">table,apple,money,yellow,rose</string>
+    <string name="base_word_audio_flash_answer2">violet,zoo,pen,cup,rope</string>
+    <string name="base_word_audio_flash_answer3">ring,bear,plate,laptop,door</string>
     <string name="time">10 Past 8</string>
     <string name="draw">DRAW</string>
     <string name="clockInstruction">Draw the time displayed on the panel.</string>

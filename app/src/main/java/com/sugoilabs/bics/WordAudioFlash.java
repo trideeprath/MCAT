@@ -47,6 +47,9 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
         setContentView(R.layout.activity_word_audio_flash);
         //toolbar = (Toolbar) findViewById(R.id.app_bar);
         //setSupportActionBar(toolbar);
+
+        wordFlashData wordFlashData = new wordFlashData(this);
+        wordFlashData.setWordFlashDrawableArray();
         showInstructionDialogBox();
         initializeLayouts();
     }
@@ -142,8 +145,45 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
         @Override
         protected Void doInBackground(String... params) {
 
+
             try {
+                player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(0));
+
+
+                player.start();
+                audioNumber++;
+                int count=0;
+                publishProgress(audioNumber);
+                Thread.sleep(2000);
+
+                player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(1));
+                player.start();
+                audioNumber++;
+                publishProgress(audioNumber);
+                Thread.sleep(2000);
+
+                //player = MediaPlayer.create(WordAudioFlash.this, R.raw.audio_penny);
+                player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(2));
+
+                player.start();
+                audioNumber++;
+                publishProgress(audioNumber);
+                Thread.sleep(2000);
+
+                player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(3));
+                player.start();
+                audioNumber++;
+                publishProgress(audioNumber);
+                Thread.sleep(2000);
+
+                player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(4));
+                player.start();
+                audioNumber++;
+                publishProgress(audioNumber);
+                Thread.sleep(2000);
+                /*
                 player = MediaPlayer.create(WordAudioFlash.this, R.raw.audio_apple);
+
 
                 player.start();
                 audioNumber++;
@@ -176,6 +216,7 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
                 audioNumber++;
                 publishProgress(audioNumber);
                 Thread.sleep(2000);
+                */
 
                 new Timer().schedule(new TimerTask() {
                     @Override

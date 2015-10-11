@@ -67,6 +67,7 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
             identifierString = "waait_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
+            answerButtons.get(i-1).setText(wordFlashData.answerString.split(",")[i - 1].toUpperCase());
         }
 
         buttonLayout = (LinearLayout)findViewById(R.id.waiit_buttons_layout);
@@ -132,9 +133,9 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
             int points = calculatePoints();
             Log.d("score", String.valueOf(points));
             saveToSharedPreference(points);
-            //startActivity(new Intent(this, patternDraw.class));
+
             startActivity(new Intent(this, Orientation.class));
-            //startActivity(new Intent(this , SimilarPicture.class));
+            //startActivity(new Intent(this, WordFlashAnswerDelayed.class));
         }
     }
 
@@ -164,7 +165,8 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
         int flag=0;
         String[] answerArray = answerText.getText().toString().split(" ");
         ArrayList<String> answerArrayList = new ArrayList<String>();
-        String[] baseAnswerArray = getResources().getString(R.string.base_word_audio_flash_answer).toString().split(",");
+        String[] baseAnswerArray = wordFlashData.answerString.split(",");
+        //String[] baseAnswerArray = getResources().getString(R.string.base_word_audio_flash_answer).toString().split(",");
         ArrayList<String> baseAnswerArrayList = new ArrayList<String>();
 
         for(String ans: answerArray){

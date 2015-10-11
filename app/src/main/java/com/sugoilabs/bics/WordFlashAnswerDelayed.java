@@ -68,6 +68,7 @@ public class WordFlashAnswerDelayed extends ActionBarActivity implements View.On
             identifierString = "waait_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
+            answerButtons.get(i-1).setText(wordFlashData.answerString.split(",")[i - 1].toUpperCase());
         }
 
         buttonLayout = (LinearLayout) findViewById(R.id.waiid_button_layout);
@@ -169,7 +170,7 @@ public class WordFlashAnswerDelayed extends ActionBarActivity implements View.On
         int flag=0;
         String[] answerArray = answerText.getText().toString().split(" ");
         ArrayList<String> answerArrayList = new ArrayList<String>();
-        String[] baseAnswerArray = getResources().getString(R.string.base_word_audio_flash_answer).toString().split(",");
+        String[] baseAnswerArray = wordFlashData.answerString.split(",");
         ArrayList<String> baseAnswerArrayList = new ArrayList<String>();
 
         for(String ans: answerArray){
