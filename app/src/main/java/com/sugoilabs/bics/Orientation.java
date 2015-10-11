@@ -352,7 +352,15 @@ public class Orientation extends ActionBarActivity implements View.OnClickListen
 
     private void showAnswerTextPrompt() {
         LayoutInflater li = LayoutInflater.from(this);
-        View promptsView = li.inflate(R.layout.step2_typein_prompt, null);
+        View promptsView = null;
+
+        if(questionCount == 0 || questionCount == 3 || questionCount == 4 || questionCount == 6){
+            promptsView = li.inflate(R.layout.step2_number_typein_prompt , null);
+        }
+        else{
+            promptsView = li.inflate(R.layout.step2_typein_prompt, null);
+        }
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         // set prompts.xml to alertdialog builder
         alertDialogBuilder.setView(promptsView);
