@@ -137,12 +137,14 @@ public class PictureFlashAnswer extends ActionBarActivity implements View.OnClic
         int flag=0;
         String[] answerArray = answerText.getText().toString().split(" ");
         ArrayList<String> answerArrayList = new ArrayList<String>();
+        //String[] baseAnswerArray = getResources().getString(R.string.base_picture_flash_answer).toString().split(",");
         String[] baseAnswerArray = getResources().getString(R.string.base_picture_flash_answer).toString().split(",");
         ArrayList<String> baseAnswerArrayList = new ArrayList<String>();
 
         for(String ans: answerArray){
             answerArrayList.add(ans.toLowerCase());
         }
+
 
         for(String ans: baseAnswerArray){
             baseAnswerArrayList.add(ans.toLowerCase());

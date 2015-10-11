@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Handler;
@@ -51,8 +53,10 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_picture_flash);
         //toolbar = (Toolbar) findViewById(R.id.app_bar);
         //setSupportActionBar(toolbar);
+        pictureFlashData pictureFlashData= new pictureFlashData(this);
         showInstructionDialogBox();
         initializeLayout();
+
 
     }
 
@@ -123,6 +127,7 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.picture_flash_start) {
             if (attempts < 2) {
+
                 startAnimation();
                 attempts++;
             } else {
@@ -136,12 +141,12 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
 
 
             //Just for debugging
-            //nextActivity = new Intent(this, PictureFlashAnswerImmediateTab.class);
-            //startActivity(nextActivity);
-
-
-            nextActivity = new Intent(this, patternDraw.class);
+            nextActivity = new Intent(this, PictureFlashAnswerImmediateTab.class);
             startActivity(nextActivity);
+
+
+            //nextActivity = new Intent(this, patternDraw.class);
+            //startActivity(nextActivity);
 
 
             //
@@ -183,13 +188,23 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
 
     private void startAnimation() {
         imageView.setVisibility(View.VISIBLE);
+        pictureFlashData.setPictureFlashDrawableArray();
+        Log.d("set", String.valueOf(pictureFlashData.set));
         animation = new AnimationDrawable();
+        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(0), 2000);
+        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(1), 3000);
+        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(2), 3000);
+        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(3), 3000);
+        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(4), 3000);
+        animation.addFrame(getResources().getDrawable(R.drawable.screen), 3000);
+        /*
         animation.addFrame(getResources().getDrawable(R.drawable.cow), 2000);
         animation.addFrame(getResources().getDrawable(R.drawable.bird), 3000);
         animation.addFrame(getResources().getDrawable(R.drawable.tree), 3000);
         animation.addFrame(getResources().getDrawable(R.drawable.boat), 3000);
         animation.addFrame(getResources().getDrawable(R.drawable.key),3000);
         animation.addFrame(getResources().getDrawable(R.drawable.screen), 3000);
+        */
 
         animation.setOneShot(true);
         imageView.setImageDrawable(animation);

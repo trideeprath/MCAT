@@ -41,7 +41,10 @@
     <string name="title_activity_picture_flash_answer">PictureFlashAnswer</string>
     <string name="pictureFlashAnswerInstruction">Please recall the pictures that you have been asked to remember.</string>
     <string name="pictureFlashAnswerInstructionTab">Please recall the pictures that have been asked to remember by clicking on the buttons.</string>
+    <string name="base_picture_flash_answer1">cow,bird,tree,boat,key</string>
     <string name="base_picture_flash_answer">cow,bird,tree,boat,key</string>
+    <string name="base_picture_flash_answer2">duck,lamp,leaf,chair,kite</string>
+    <string name="base_picture_flash_answer3">clock,bus,cat,spoon,shoe</string>
     <string name="title_activity_clock">Clock</string>
     <string name="title_activity_word_audio_flash">WordAudioFlash</string>
     <string name="wordAudioInstruction">Please listen to and remember the following spoken words. You will be asked to recall them immediate after and later.</string>

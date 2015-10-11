@@ -68,6 +68,7 @@ public class PictureFlashAnswerDelayedTab extends ActionBarActivity implements V
             identifierString = "pfait_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
+            answerButtons.get(i-1).setText(pictureFlashData.answerString.split(",")[i - 1].toUpperCase());
         }
 
         buttonsLayout  = (LinearLayout) findViewById(R.id.pfaid_layout);
@@ -144,7 +145,8 @@ public class PictureFlashAnswerDelayedTab extends ActionBarActivity implements V
         int flag=0;
         String[] answerArray = answerText.getText().toString().split(" ");
         ArrayList<String> answerArrayList = new ArrayList<String>();
-        String[] baseAnswerArray = getResources().getString(R.string.base_picture_flash_answer).toString().split(",");
+        String[] baseAnswerArray =  pictureFlashData.answerString.split(",");
+       // String[] baseAnswerArray = getResources().getString(R.string.base_picture_flash_answer).toString().split(",");
         ArrayList<String> baseAnswerArrayList = new ArrayList<String>();
 
         for(String ans: answerArray){
