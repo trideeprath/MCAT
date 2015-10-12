@@ -60,6 +60,8 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
         start.setOnClickListener(this);
         done = (Button) findViewById(R.id.word_audio_done);
         done.setOnClickListener(this);
+        done.setVisibility(View.INVISIBLE);
+
         player = MediaPlayer.create(this, R.raw.audio_apple);
 
         wordNumberTextView = (TextView) findViewById(R.id.audio_number_textview);
@@ -243,6 +245,7 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
             setWordNumberText(5);
+            done.setVisibility(View.VISIBLE);
 
         }
 

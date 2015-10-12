@@ -149,12 +149,20 @@ public class DrawingActivity extends ActionBarActivity {
 
         Log.d("rectangle count, Straight count ", String.valueOf(rectangleCount) + ", " + String.valueOf(straightLineCount));
 
+
+
         if (rectangleCount == 3 && straightLineCount == 5 || rectangleCount == 3 && straightLineCount == 6) {
             Log.d("Calculate points", "yes");
             points = 5;
 
         }
-        else if(rectangleCount==3 &&  straightLineCount == 1 || rectangleCount == 3 && straightLineCount == 2 || rectangleCount == 3 && straightLineCount == 3){
+        else if(rectangleCount==2 ){
+            points = 2;
+        }
+        else if(rectangleCount ==1){
+            points =1;
+        }
+        else if(rectangleCount==3 &&  straightLineCount == 0 ||rectangleCount==3 &&  straightLineCount == 1 || rectangleCount == 3 && straightLineCount == 2 || rectangleCount == 3 && straightLineCount == 3){
             points =3;
         }
         else {

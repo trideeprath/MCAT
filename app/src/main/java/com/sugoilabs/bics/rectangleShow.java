@@ -1,21 +1,27 @@
 package com.sugoilabs.bics;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
 
 public class rectangleShow extends ActionBarActivity {
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rectangle_show);
+        imageView = (ImageView) findViewById(R.id.image_view);
+        imageView.setVisibility(View.INVISIBLE);
         showInstructionDialogBox();
     }
 
@@ -27,6 +33,7 @@ public class rectangleShow extends ActionBarActivity {
             @Override
             public void onPositive(MaterialDialog dialog) {
                 //Log.d("OK ", "great");
+                imageView.setVisibility(View.VISIBLE);
                 new Handler().postDelayed(new Runnable() {
 
                     @Override
@@ -35,7 +42,7 @@ public class rectangleShow extends ActionBarActivity {
                         startActivity(i);
                         finish();
                     }
-                }, 5000);
+                }, 9000);
 
 
             }

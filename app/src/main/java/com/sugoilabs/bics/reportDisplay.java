@@ -151,7 +151,7 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
         double totalAvgInTimeModules = findAvgTimeInDouble();
         DecimalFormat df = new DecimalFormat("#.000");
 
-        reportStringNew = reportStringNew + "\n" + "Cognitive Processing Speed - " + df.format(totalTimeInTimeModules) + " Avg Speed - " + df.format(totalAvgInTimeModules) + " Sec";
+        reportStringNew = reportStringNew + "\n" + "Cognitive Processing Speed - " + df.format(totalTimeInTimeModules);
         reportStringNew = reportStringNew + "\n" + "Visual Connect Dots = " + first;
         reportStringNew = reportStringNew + "\n" + "Visual Picture Drawing = " + second;
         reportStringNew = reportStringNew + "\n" + "Semantic Colors = " + third;
