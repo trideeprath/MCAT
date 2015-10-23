@@ -69,10 +69,13 @@ public class InitialQuestionForm extends ActionBarActivity implements View.OnCli
         prePostEditor.putString("pre_post_injury", "Pre-Concussion Injury");
         prePostEditor.commit();
 
+
+
         intent = new Intent(this, PictureFlash.class);
 
         saveScoreToSharedPreference();
         startActivity(intent);
+
 
         //startActivity(intent);
         //intent = new Intent(this, SelectShapes.class);

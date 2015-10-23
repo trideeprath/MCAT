@@ -47,13 +47,16 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
     Intent nextActivity;
     AnimationDrawable animation;
 
+    pictureFlashData pictureFlashDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_flash);
         //toolbar = (Toolbar) findViewById(R.id.app_bar);
         //setSupportActionBar(toolbar);
-        pictureFlashData pictureFlashData= new pictureFlashData(this);
+        //pictureFlashDatabase= new pictureFlashData(this);
+        pictureFlashData.setContext(this);
         showInstructionDialogBox();
         initializeLayout();
 
@@ -187,14 +190,16 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
 
     private void startAnimation() {
         imageView.setVisibility(View.VISIBLE);
+        //Log.d("set", String.valueOf(pictureFlashData.set));
+
         pictureFlashData.setPictureFlashDrawableArray();
-        Log.d("set", String.valueOf(pictureFlashData.set));
+        pictureFlashData pcd = new pictureFlashData(this);
         animation = new AnimationDrawable();
-        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(0), 2000);
-        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(1), 3000);
-        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(2), 3000);
-        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(3), 3000);
-        animation.addFrame(pictureFlashData.pictureFlashDrawableArray.get(4), 3000);
+        animation.addFrame(pcd.pictureFlashDrawableArray.get(0), 2000);
+        animation.addFrame(pcd.pictureFlashDrawableArray.get(1), 3000);
+        animation.addFrame(pcd.pictureFlashDrawableArray.get(2), 3000);
+        animation.addFrame(pcd.pictureFlashDrawableArray.get(3), 3000);
+        animation.addFrame(pcd.pictureFlashDrawableArray.get(4), 3000);
         animation.addFrame(getResources().getDrawable(R.drawable.screen), 3000);
         /*
         animation.addFrame(getResources().getDrawable(R.drawable.cow), 2000);
@@ -234,6 +239,13 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
 
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        pictureFlashData.unsetPictureFlashDrawableArray();
+        //pictureFlashData.setPictureFlashDrawableArray();
     }
 
 

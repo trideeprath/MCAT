@@ -32,12 +32,13 @@ public class PictureFlashAnswerImmediateTab extends ActionBarActivity implements
     Button none;
     String currentAnswerString="";
     LinearLayout buttonsLayout;
+    pictureFlashData pcd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_flash_answer_immediate_tab);
-
+        pcd = new pictureFlashData(this);
         initializeLayout();
         showInstructionDialogBox();
     }
@@ -62,20 +63,21 @@ public class PictureFlashAnswerImmediateTab extends ActionBarActivity implements
 
         //notes = (TextView)findViewById(getResources().getIdentifier(VIEW_NAME, "id", getPackageName()));
 
+
         String identifierString;
         for(int i =1 ; i<6 ; i++) {
             identifierString = "pfait_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
-            answerButtons.get(i-1).setText(pictureFlashData.answerString.split(",")[i-1].toUpperCase());
+            answerButtons.get(i-1).setText(pcd.answerString.split(",")[i-1].toUpperCase());
         }
 
         buttonsLayout = (LinearLayout) findViewById(R.id.pfia_layout);
         buttonsLayout.setVisibility(View.INVISIBLE);
 
 
-
     }
+
 
     public void showInstructionDialogBox(){
         MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.pictureFlashAnswerInstructionTab).positiveText(R.string.next).cancelable(false);
@@ -88,8 +90,6 @@ public class PictureFlashAnswerImmediateTab extends ActionBarActivity implements
             }
         });
     }
-
-
 
 
 
@@ -139,6 +139,8 @@ public class PictureFlashAnswerImmediateTab extends ActionBarActivity implements
 
         }
     }
+
+
 
     private int calculatePoints() {
         int point;

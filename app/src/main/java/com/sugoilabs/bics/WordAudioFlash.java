@@ -149,6 +149,7 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
 
 
             try {
+
                 player = MediaPlayer.create(WordAudioFlash.this, wordFlashData.wordFlashDrawableArray.get(0));
 
 
@@ -183,6 +184,7 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
                 audioNumber++;
                 publishProgress(audioNumber);
                 Thread.sleep(2000);
+
                 /*
                 player = MediaPlayer.create(WordAudioFlash.this, R.raw.audio_apple);
 
