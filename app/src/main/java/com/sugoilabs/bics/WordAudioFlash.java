@@ -262,5 +262,15 @@ public class WordAudioFlash extends ActionBarActivity implements View.OnClickLis
     public void onBackPressed() {
     }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        //pictureFlashData.unsetPictureFlashDrawableArray();
+        //pictureFlashData.setPictureFlashDrawableArray();
+        wordFlashData.unsetWordFlashDrawableArray();
+    }
+
+
+
 
 }

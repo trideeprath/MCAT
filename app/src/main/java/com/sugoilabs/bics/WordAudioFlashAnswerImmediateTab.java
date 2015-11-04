@@ -33,6 +33,7 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
     Button none;
     String currentAnswerString="";
     LinearLayout buttonLayout;
+    wordFlashData wcd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
         setContentView(R.layout.activity_word_audio_flash_answer_immediate_tab);
         initializeLayout();
         showInstructionDialogBox();
+        wcd = new wordFlashData(this);
     }
 
 
@@ -67,7 +69,7 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
             identifierString = "waait_word"+String.valueOf(i);
             answerButtons.add((Button) findViewById(getResources().getIdentifier(identifierString, "id", getPackageName())));
             answerButtons.get(i-1).setOnClickListener(this);
-            answerButtons.get(i-1).setText(wordFlashData.answerString.split(",")[i - 1].toUpperCase());
+            answerButtons.get(i-1).setText(wcd.answerString.split(",")[i - 1].toUpperCase());
         }
 
         buttonLayout = (LinearLayout)findViewById(R.id.waiit_buttons_layout);
@@ -134,6 +136,7 @@ public class WordAudioFlashAnswerImmediateTab extends ActionBarActivity implemen
             Log.d("score", String.valueOf(points));
             saveToSharedPreference(points);
 
+            //original flow
             startActivity(new Intent(this, Orientation.class));
             //startActivity(new Intent(this, WordFlashAnswerDelayed.class));
         }

@@ -20,6 +20,11 @@ public class wordFlashData {
     public static ArrayList<Integer> wordFlashDrawableArray = new ArrayList<Integer>();
     public static String answerString;
     public static int set=0;
+
+    public static void setContext(Context cxt){
+        context = cxt;
+    }
+
     public static void setWordFlashDrawableArray(){
         Random rand = new Random();
         set = rand.nextInt(3);
@@ -57,6 +62,12 @@ public class wordFlashData {
                 break;
 
         }
+    }
+
+
+    public static void unsetWordFlashDrawableArray(){
+        wordFlashDrawableArray.clear();
+
     }
 
 }

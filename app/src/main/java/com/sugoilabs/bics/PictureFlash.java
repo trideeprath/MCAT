@@ -149,7 +149,7 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
 
 
 
-            //nextActivity = new Intent(this,StoryPlayOne.class);
+            //nextActivity = new Intent(this,WordAudioFlash.class);
             //startActivity(nextActivity);
 
 

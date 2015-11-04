@@ -128,6 +128,7 @@ public class PictureFlashAnswerImmediateTab extends ActionBarActivity implements
             answerText.setText(currentAnswerString);
             button.setVisibility(View.INVISIBLE);
         }
+
         if(view.getId() == R.id.picture_flash_immediate_answer_done || view.getId()==R.id.pfait_none){
             Log.d("done","done");
             int points = calculatePoints();
