@@ -37,6 +37,7 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
     int audioNumber=0;
     int score = 0;
     Intent nextActivityIntent;
+    storyData sd;
 
 
     @Override
@@ -45,7 +46,9 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_story_play_two);
         showInstructionDialogBox();
         initializeLayouts();
+        sd = new storyData(this);
     }
+
 
     public void showInstructionDialogBox() {
         MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.story_play_one_instruction).positiveText(R.string.next).cancelable(false);
@@ -145,6 +148,7 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
         protected Void doInBackground(String... params) {
 
             try {
+                //storyData.setStoryArray();
                 player = MediaPlayer.create(StoryPlayTwo.this, storyData.storyArray.get(1));
 
                 //player = MediaPlayer.create(StoryPlayTwo.this, R.raw.story_marylwanmore);
@@ -193,5 +197,9 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
     }
+
+
+
+
 
 }

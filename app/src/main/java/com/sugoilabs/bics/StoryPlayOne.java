@@ -41,11 +41,20 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_play_one);
-        storyData storyData = new storyData(this);
-        storyData.setStoryArray();
+        //storyData storyData = new storyData(this);
+        //storyData.setStoryArray();
+        storyData.setContext(this);
         showInstructionDialogBox();
         initializeLayouts();
 
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d("Start Called", "storyPlayOne");
+        storyData.unsetStoryArray();
+        storyData.setStoryArray();
     }
 
 
@@ -145,6 +154,7 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
             try {
 
                 //player = MediaPlayer.create(StoryPlayOne.this, R.raw.story_johnsneighbor_robert);
+                //storyData.setStoryArray();
                 player = MediaPlayer.create(StoryPlayOne.this, storyData.storyArray.get(0));
                 player.start();
                 audioNumber++;
@@ -190,5 +200,18 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
     }
+
+
+
+    /*
+    @Override
+    public void onPause(){
+        super.onPause();
+        storyData.unsetStoryArray();
+        Log.d("Pause Called", "storyPlayOne");
+        //storyData.setStoryArray();
+    }
+    */
+
 
 }
