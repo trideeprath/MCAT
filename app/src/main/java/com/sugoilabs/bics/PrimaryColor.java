@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -93,7 +94,7 @@ public class PrimaryColor extends ActionBarActivity implements View.OnClickListe
 
 
     public void showInstructionDialogBox(){
-        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.primary_color_instruction).positiveText(R.string.next).cancelable(false);
+        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).contentColor(Color.RED).content(R.string.primary_color_instruction).positiveText(R.string.next).cancelable(false);
         dialogBuilder.show();
         dialogBuilder.callback(new MaterialDialog.ButtonCallback() {
             @Override

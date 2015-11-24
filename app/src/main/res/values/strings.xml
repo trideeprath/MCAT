@@ -24,7 +24,8 @@
     <string name="start">START</string>
     <string name="done">DONE</string>
     <string name="step4_instruction_content">Please increase your device’s volume, an audio will now play. Please remember this and type in or repeat in the same words.</string>
-    <string name="story_play_one_instruction">Please increase your device’s volume, an audio will now play. Please remember this, you will be asked to recall it immediate after and later.</string>
+    <string name="story_play_one_instruction">Please increase your device volume, a short story 1 audio will play. Please remember, you will be asked to recall in same words, immediate after and later.</string>
+    <string name="story_play_two_instruction">Please increase your device volume, a short story 2 audio will play. Please remember, you will be asked to recall in same words, immediate after and later.</string>
     <string name="next">NEXT</string>
     <string name="play">PLAY</string>
     <string name="type_sentence">Type the sentence</string>
@@ -32,7 +33,7 @@
     <string name="audio_second">Audio 2</string>
     <string name="speak_sentence">Speak the sentence</string>
     <string name="title_activity_step5">Step5</string>
-    <string name="primary_color_instruction">Please speak or type in as many color as you can in the following screen.(Enter minimum seven colors)</string>
+    <string name="primary_color_instruction">Please speak as many colors as you can, after the examiner tells you start. Examiner, please take the tablet to enter the colors answers. </string>
     <string name="type_primary_color">Please speak or type in as many color as you can in the following screen</string>
     <string name="final_attempt">This is your final attempt</string>
     <string name="base_colors">white,blue,red,orange,yellow,violet,black,gray,green,brown,magenta,indigo,pink,baize,purple,cyan</string>
@@ -40,7 +41,7 @@
     <string name="pictureFlashInstruction">Pictures will flash one after another. Remember the pictures, you will be asked to recall them immediate after and later.</string>
     <string name="title_activity_picture_flash_answer">PictureFlashAnswer</string>
     <string name="pictureFlashAnswerInstruction">Please recall the pictures that you have been asked to remember.</string>
-    <string name="pictureFlashAnswerInstructionTab">Please recall the pictures that have been asked to remember by clicking on the buttons.</string>
+    <string name="pictureFlashAnswerInstructionTab">Please recall the picture you have been asked to remember in beginning of the exam. Examiner, please take the tablet to enter the names of the pictures.</string>
     <string name="base_picture_flash_answer1">cow,bird,tree,boat,key</string>
     <string name="base_picture_flash_answer">cow,bird,tree,boat,key</string>
     <string name="base_picture_flash_answer2">duck,lamp,leaf,chair,kite</string>
@@ -49,7 +50,7 @@
     <string name="title_activity_word_audio_flash">WordAudioFlash</string>
     <string name="wordAudioInstruction">Please listen to and remember the following spoken words. You will be asked to recall them immediate after and later.</string>
     <string name="title_activity_word_audio_flash_answer">WordAudioFlashAnswer</string>
-    <string name="audioWordAnswerInstruction">Recall the five words that you have been asked to remember before by clicking on the appropriate buttons.</string>
+    <string name="audioWordAnswerInstruction">Please recall the 5 words you have heard on audio in beginning of the test. Examiner, please take the tablet to enter the words.</string>
     <string name="numberRecallInstruction">Audio will play combination of the numbers, please type or speak the same number to enter.</string>
     <string name="base_word_audio_flash_answer">table,apple,money,yellow,rose</string>
     <string name="base_word_audio_flash_answer1">table,apple,money,yellow,rose</string>
@@ -67,7 +68,7 @@
     <string name="pattern_answer">5K6</string>
     <string name="title_activity_traumatic_injury">TraumaticInjury</string>
     <string name="title_activity_final_screen">Result</string>
-    <string name="patternDrawInstruction">Tap on the next number and alphabet in increasing order, eg. 5->K->6->L-> and so on.Start from green button.</string>
+    <string name="patternDrawInstruction">Tap on the next alphabet and numbers in increasing order, Start from the L green button. Eg. 5</string>
     <string name="bics_screening_result">Result of BICS Screening Test</string>
     <string name="bics">Mobile Cognitive Assessment Test</string>
     <string name="doctor_name">Suresh Kumar, MD</string>
@@ -84,7 +85,7 @@
     <string name="pattern_draw">Draw the Pattern</string>
     <string name="title_activity_rectangle_show">rectangleShow</string>
     <string name="drawing_remember">REMEMBER THE DRAWING</string>
-    <string name="rectangleDrawInstruction">Remember the following drawing that will be shown for 5 seconds. Then redraw it in the next screen.</string>
+    <string name="rectangleDrawInstruction">Remember the following drawing that will be displayed for 10 seconds. Draw on next screen with the help of the square and line tab on the top of the screen.</string>
     <string name="speak">SPEAK</string>
     <string name="type">TYPE</string>
     <string name="title_activity_similar_picture">SimilarPicture</string>
@@ -123,7 +124,7 @@
     </string>
     <string name="title_activity_word_audio_flash_answer_immediate">WordAudioFlashAnswerImmediate
     </string>
-    <string name="audioWordAnswerImmediateInstruction">Enter the word you have just heard on audio</string>
+    <string name="audioWordAnswerImmediateInstruction">Please recall the words you have just heard on audio. Examiner, please take the tablet to enter the words.</string>
     <string name="title_activity_number_recall">NumberRecall</string>
     <string name="title_activity_reverse_number_recall">ReverseNumberRecall</string>
     <string name="title_activity_orientation">Orientation</string>
@@ -139,8 +140,13 @@
     <string name="title_activity_delayed_recall_story">DelayedRecallStory</string>
     <string name="delayed_story_recall">Delayed Story Recall</string>
     <string name="next_story">NEXT STORY</string>
-    <string name="delayedRecallStoryOneInstruction">Try to recall the Story 1. Please press the buttons with appropriate words which is recalled.</string>
-    <string name="delayedRecallStoryTwoInstruction">Try to recall the Story 2. Please press the buttons with appropriate words which is recalled.</string>
+    <string name="delayedRecallStoryOneInstruction">Please try to recall the story 1 in same words as much as possible. Examiner, please take the tablet to enter the story1 in words.</string>
+    <string name="delayedRecallStoryTwoInstruction">Please try to recall the story 2 in same words as much as possible. Examiner, please take the tablet to enter the story2 in words.</string>
+
+    <string name="delayedRecallStoryOneInstructionNew">Please try to recall the story 1 in same words as much as possible. Examiner, please take the tablet to enter the story1 in words.</string>
+    <string name="delayedRecallStoryTwoInstructionNew">Please try to recall the story 2 in same words as much as possible. Examiner, please take the tablet to enter the story2 in words.</string>
+
+
 
     <string name="story_one_string">John,neighbour,Robert,vacation home,other month,white dog,golf club,laptop,plenty,cigar,every other,visit</string>
     <string name="story_two_string">Mary,loaned,lawnmower,shovel,weed spray,gloves,nephew,last year,returned,loan,anything,decided</string>

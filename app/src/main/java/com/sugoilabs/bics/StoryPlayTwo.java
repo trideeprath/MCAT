@@ -51,7 +51,7 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
 
 
     public void showInstructionDialogBox() {
-        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.story_play_one_instruction).positiveText(R.string.next).cancelable(false);
+        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.story_play_two_instruction).positiveText(R.string.next).cancelable(false);
         dialogBuilder.show();
         dialogBuilder.callback(new MaterialDialog.ButtonCallback() {
             @Override

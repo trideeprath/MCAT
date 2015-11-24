@@ -2,6 +2,7 @@ package com.sugoilabs.bics;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -78,7 +79,7 @@ public class PictureFlashAnswerDelayedTab extends ActionBarActivity implements V
 
 
     public void showInstructionDialogBox(){
-        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).content(R.string.pictureFlashAnswerInstructionTab).positiveText(R.string.next).cancelable(false);
+        MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this).title(R.string.instruction).contentColor(Color.RED).content(R.string.pictureFlashAnswerInstructionTab).positiveText(R.string.next).cancelable(false);
         dialogBuilder.show();
         dialogBuilder.callback(new MaterialDialog.ButtonCallback() {
             @Override
