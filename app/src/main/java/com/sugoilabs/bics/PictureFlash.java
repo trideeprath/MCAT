@@ -145,8 +145,16 @@ public class PictureFlash extends ActionBarActivity implements View.OnClickListe
 
             //Original Flow
             nextActivity = new Intent(this, PictureFlashAnswerImmediateTab.class);
+            
             startActivity(nextActivity);
 
+
+
+
+
+            //Debug Flow
+            //nextActivity = new Intent(this, patternDraw.class);
+            //startActivity(nextActivity);
 
 
             //nextActivity = new Intent(this,WordAudioFlash.class);
