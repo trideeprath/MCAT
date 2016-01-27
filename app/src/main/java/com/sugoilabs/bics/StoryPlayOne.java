@@ -145,6 +145,7 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
         protected void onPreExecute() {
             super.onPreExecute();
             setWordNumberText(1);
+            start.setClickable(false);
 
         }
 
@@ -187,6 +188,7 @@ public class StoryPlayOne extends ActionBarActivity implements View.OnClickListe
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
             setWordNumberText(2);
+            start.setClickable(true);
 
         }
 

@@ -216,7 +216,7 @@ public class Orientation extends ActionBarActivity implements View.OnClickListen
             }
             Log.d("score",String.valueOf(totalScore));
             Toast.makeText(this,"Points is: " + String.valueOf(points)+ " Total Score is:" + ScoreToast,Toast.LENGTH_SHORT).show();
-            reportScoreSave.scoreSave.add(moduleString + " : " + String.valueOf(points));
+            reportScoreSave.scoreSave.add(moduleString + ":" + String.valueOf(points));
         }
 
     }
@@ -260,6 +260,11 @@ public class Orientation extends ActionBarActivity implements View.OnClickListen
                         }
                         Log.d("twoDaysBeforeToday", twoDaysBeforeToday);
                         if(currentAnswer.equalsIgnoreCase(twoDaysBeforeToday)){
+                            answerStatus = true;
+                        }
+                        if(currentAnswer.equalsIgnoreCase("Sunday")||currentAnswer.equalsIgnoreCase("Monday") ||
+                                currentAnswer.equalsIgnoreCase("Tuesday")||currentAnswer.equalsIgnoreCase("Wednesday")||
+                                currentAnswer.equalsIgnoreCase("Thursday")||currentAnswer.equalsIgnoreCase("Friday")||currentAnswer.equalsIgnoreCase("Saturday")){
                             answerStatus = true;
                         }
                     }

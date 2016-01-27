@@ -175,43 +175,45 @@ public class ReverseNumberRecall extends ActionBarActivity implements View.OnCli
         }
         if(view.getId() == R.id.number_recall_done){
 
-            if(mediaStatusTextView.getText().toString().matches("[0-9]+") ) {
-            if(audioPlayedCount < numbersArrayList.size()) {
-                //start.setVisibility(View.VISIBLE);
+           //if(mediaStatusTextView.getText().toString().matches("[0-9]+") ) {
+                if(audioPlayedCount < numbersArrayList.size()) {
+                    //start.setVisibility(View.VISIBLE);
 
-                done.setVisibility(View.INVISIBLE);
-                answerLayout.setVisibility(View.INVISIBLE);
+                    done.setVisibility(View.INVISIBLE);
+                    answerLayout.setVisibility(View.INVISIBLE);
 
-                String answerProvided = mediaStatusTextView.getText().toString();
-                if (answerProvided.equals(numbersAnswerArrayList.get(audioPlayedCount - 1))) {
-                    correctAnswerCount++;
-                    Toast.makeText(this, "correct answer " + correctAnswerCount, Toast.LENGTH_SHORT).show();
-                    Log.d("given, answer", mediaStatusTextView.getText().toString() + " "+
-                            numbersAnswerArrayList.get(audioPlayedCount -1));
-                } else {
-                    Toast.makeText(this, "Incorrect answer", Toast.LENGTH_SHORT).show();
-                    Log.d("given, answer", mediaStatusTextView.getText().toString() + " " +
-                            numbersAnswerArrayList.get(audioPlayedCount - 1));
+                    String answerProvided = mediaStatusTextView.getText().toString();
+                    if (answerProvided.equals(numbersAnswerArrayList.get(audioPlayedCount - 1))) {
+                        correctAnswerCount++;
+                        Toast.makeText(this, "correct answer " + correctAnswerCount, Toast.LENGTH_SHORT).show();
+                        Log.d("given, answer", mediaStatusTextView.getText().toString() + " "+
+                                numbersAnswerArrayList.get(audioPlayedCount -1));
+                    } else {
+                        Toast.makeText(this, "Incorrect answer", Toast.LENGTH_SHORT).show();
+                        Log.d("given, answer", mediaStatusTextView.getText().toString() + " " +
+                                numbersAnswerArrayList.get(audioPlayedCount - 1));
+                    }
+
+                    playAudioWithCount(audioPlayedCount);
+                    disableEditing();
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(mediaStatusTextView.getWindowToken(), 0);
+                }
+                else{
+                    Log.d("all questions ","over" );
+                    int points = calculatePoints();
+                    Log.d("score", String.valueOf(points));
+                    saveToSharedPreference(points);
+                    startActivity(new Intent(this, PrimaryColor.class));
+
                 }
 
-                playAudioWithCount(audioPlayedCount);
-                disableEditing();
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(mediaStatusTextView.getWindowToken(), 0);
-            }
-            else{
-                Log.d("all questions ","over" );
-                int points = calculatePoints();
-                Log.d("score", String.valueOf(points));
-                saveToSharedPreference(points);
-                startActivity(new Intent(this, PrimaryColor.class));
+            //}
 
-            }
-
-        }
-        else {
+        /*else {
             Toast.makeText(this, "Please enter a valid number",Toast.LENGTH_SHORT).show();
-        }
+        }*/
+
         }
 
     }

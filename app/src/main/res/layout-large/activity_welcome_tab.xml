@@ -51,7 +51,7 @@
             android:layout_marginRight="24dp"
             android:gravity="left"
             android:shadowColor="@color/icons"
-            android:text="MCAT was Developed after comprehensive Research presented and accepted by: \nAmerican Academy of Neurology 2015 \nAmerican Medical Informatics Association 2015 \n"
+            android:text="DMAC was Developed after comprehensive Research presented and accepted by: \nAmerican Academy of Neurology 2015 \nAmerican Medical Informatics Association 2015 \n"
             android:textColor="@color/icons"
             android:textSize="24sp"/>
 

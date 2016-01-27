@@ -64,6 +64,7 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
     Map<String,Integer> disinhibition = new HashMap<String,Integer>();
     Map<String,Integer> attentionAndExecutive = new HashMap<String,Integer>();
     Map<String,Integer> semanticOrLanguage = new HashMap<String,Integer>();
+    Map<String,Integer> numberRecall = new HashMap<String,Integer>();
 
     double first =0, second =0, third =0;
 
@@ -135,10 +136,11 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
 
 
         //Log.d("ArrayList", reportStringArrayList.toString());
+
         Log.d("ReportString", reportString.toString());
 
         String reportStringNew = name + "\n"+ dateString + "\n" + printMap(immediateVisualRecall,1) + "\n" + printMap(immediateAuditoryRecall,2)+ "\n" +printMap(delayedRecall,3) + "\n" +printMap(disinhibition,4)+
-                "\n" + printMap(attentionAndExecutive,5)+  "\n" + printMap(semanticOrLanguage,6);
+                "\n" + printMap(attentionAndExecutive,5) +  "\n" + printMap(semanticOrLanguage,6) + "\n" + printMap(numberRecall,7);
 
         Log.d("ReportStringNew", reportStringNew);
 
@@ -223,6 +225,40 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
         Log.d("Name ", String.valueOf(moduleName));
         Log.d("Score ", String.valueOf(score));
 
+        if(moduleName.equalsIgnoreCase("Immediate Visual Picture Recall") || moduleName.equalsIgnoreCase("Immediate Visual Spatial Select Picture") ||
+                moduleName.equalsIgnoreCase("Immediate Visual Drawing Recall")){
+            immediateVisualRecall.put(moduleName , score);
+        }
+        else if(moduleName.equalsIgnoreCase("Immediate Number Recall") || moduleName.equalsIgnoreCase("Immediate Word Recall") ||
+                moduleName.equalsIgnoreCase("Immediate Auditory Recall Story")){
+            immediateAuditoryRecall.put(moduleName , score);
+        }
+        else if(moduleName.equalsIgnoreCase("Delayed Auditory Word Recall") || moduleName.equalsIgnoreCase("Delayed Auditory Story Recall") ||
+                moduleName.equalsIgnoreCase("Delayed Visual Picture Recall")){
+            delayedRecall.put(moduleName,score);
+        }
+
+        else if(moduleName.equalsIgnoreCase("Disinhibition V Tap") || moduleName.equalsIgnoreCase("Disinhibition Square and Triangle")){
+            score = (int)(score *1.5);
+            disinhibition.put(moduleName,score);
+        }
+        else if(moduleName.equalsIgnoreCase("Cognitive Processing connect the dot") || moduleName.equalsIgnoreCase("Question Attention") ||
+                moduleName.equalsIgnoreCase("Attention Auditory Reverse Number Recall")){
+            Log.d("Semantic:", moduleName);
+            attentionAndExecutive.put(moduleName, score);
+        }
+        else if(moduleName.equalsIgnoreCase("Semantic Color Score") || moduleName.equalsIgnoreCase("Semantic Question") || moduleName.equalsIgnoreCase("Semantic Group Matching")){
+            Log.d("Semantic:", moduleName);
+            semanticOrLanguage.put(moduleName,score);
+        }
+        if(moduleName.equalsIgnoreCase("Immediate Number Recall") || moduleName.equalsIgnoreCase("Attention Auditory Reverse Number Recall") ||
+                moduleName.equalsIgnoreCase("Visual Number Recall")){
+            numberRecall.put(moduleName,score);
+        }
+
+
+
+        /*
         if(j==1 || j==8|| j==9){
             immediateVisualRecall.put(moduleName , score);
         }
@@ -242,6 +278,7 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
         else if(j ==  11 || j == 12 || j == 4) {
             semanticOrLanguage.put(moduleName,score);
         }
+        */
 
     }
 
@@ -280,6 +317,9 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
                 break;
             case 6:
                 titleString = "Semantic or Language";
+                break;
+            case 7:
+                titleString = "Number Recall";
                 break;
             default:
                 titleString="";

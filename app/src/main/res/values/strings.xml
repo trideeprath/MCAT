@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MCAT</string>
+    <string name="app_name">DMAC</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="welcome_message">Welcome to Brain Injury Cognitive Screening</string>
+    <string name="welcome_message">Welcome to Dynamic Mobile Cognitive Assessment</string>
     <string name="title_activity_step1">Answer These</string>
     <string name="step1_question1">Have you suffered from a concussion or traumatic brain injury?</string>
     <string name="step1_question2">Did you lose consciousness after your brain injury?</string>
@@ -70,14 +70,14 @@
     <string name="title_activity_final_screen">Result</string>
     <string name="patternDrawInstruction">Tap on the next alphabet and numbers in increasing order, Start from the L green button. Eg. 5</string>
     <string name="bics_screening_result">Result of BICS Screening Test</string>
-    <string name="bics">Mobile Cognitive Assessment Test</string>
+    <string name="bics">Dynamic Mobile Cognitive Assesssment</string>
     <string name="doctor_name">Suresh Kumar, MD</string>
     <string name="press_start">Press Start</string>
     <string name="traumatic_injury_question1">How long ago did you have traumatic brain injury?</string>
     <string name="traumatic_injury_question2">If this is your second TBI, what is time duration between your first and second TBI/concussion?</string>
     <string name="title_activity_draw_rectangle">DrawRectangle</string>
     <string name="title_activity_false_positive_caution">FalsePositiveCaution</string>
-    <string name="false_positive">MCAT may give false positive results in :</string>
+    <string name="false_positive">DMAC may give false positive results in :</string>
     <string name="false_positive_cases">• Untreated depression or anxiety \n• Unrestful sleep overnight \n• Medication with drowsiness or   psycho motor slowing</string>
     <string name="restart">REPEAT</string>
     <string name="title_activity_pattern_show_layout">PatternShowLayout</string>
@@ -169,6 +169,7 @@
     <string name="auditory_immediate_recall_story_new">Immediate Auditory Recall Story</string>
     <string name="visual_cognitive_attention_task_new">Cognitive Processing connect the dot</string>
     <string name="number_recall_new">Immediate Number Recall</string>
+    <string name="visual_number_recall">Visual Number Recall</string>
     <string name="visual_recall_immediate_task_new">Immediate Visual Drawing Recall</string>
     <string name="visual_spatial_immedite_task_new">Immediate Visual Spatial Select Picture</string>
     <string name="number_recall_reverse_new">Attention Auditory Reverse Number Recall</string>
@@ -179,5 +180,6 @@
     <string name="delayed_story_recall_new">Delayed Auditory Story Recall</string>
     <string name="visual_motor_coordination_new">Disinhibition V Tap</string>
     <string name="auditory_delayed_recall_new">Delayed Auditory Word Recall</string>
+    <string name="title_activity_visual_number_recall">VisualNumberRecall</string>
 
 </resources>

@@ -149,7 +149,8 @@ public class DelayedRecallStoryTwo extends ActionBarActivity implements View.OnC
             //startActivity(new Intent(this, patternDraw.class));
             //startActivity(new Intent(this, WordAudioFlash.class));
             //startActivity(new Intent(this , SimilarPicture.class));
-            startActivity(new Intent(this, SelectLetter.class));
+            //startActivity(new Intent(this, SelectLetter.class));
+            startActivity(new Intent(this, VisualNumberRecall.class));
         }
     }
 

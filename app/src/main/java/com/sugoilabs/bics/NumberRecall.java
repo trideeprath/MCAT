@@ -177,8 +177,7 @@ public class NumberRecall extends ActionBarActivity implements View.OnClickListe
         }
         if(view.getId() == R.id.number_recall_done){
 
-            //if (text.matches("[0-9]+") && text.length() > 2) {
-            if(mediaStatusTextView.getText().toString().matches("[0-9]+")) {
+            //if(mediaStatusTextView.getText().toString().matches("[0-9]+")) {
                 if (audioPlayedCount < numbersArrayList.size()) {
                     //start.setVisibility(View.VISIBLE);
                     done.setVisibility(View.INVISIBLE);
@@ -208,9 +207,12 @@ public class NumberRecall extends ActionBarActivity implements View.OnClickListe
                     //startActivity(new Intent(this, FinalScreen.class));
 
                 }
-            }else {
+           // }
+
+
+           /* else {
                 Toast.makeText(this, "Please enter a valid number",Toast.LENGTH_SHORT).show();
-            }
+            }*/
 
         }
 

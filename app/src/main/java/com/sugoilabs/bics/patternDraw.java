@@ -311,7 +311,7 @@ public class patternDraw extends Activity implements View.OnClickListener {
         String answer = stringBuilder.toString();
 
         if(answer.charAt(0)=='5'){
-            for(int x =0; x < answer.length() ; x++){
+            for(int x =0; x < answer.length() && x < firstAnswer.length() ; x++){
                 if(answer.charAt(x) == firstAnswer.charAt(x)){
                     points++;
                 }
@@ -319,14 +319,14 @@ public class patternDraw extends Activity implements View.OnClickListener {
         }
         else if(answer.charAt(0) == 'L'){
             points++;
-            for(int x =0; x < answer.length() ; x++){
+            for(int x =0; x < answer.length() && x < secondAnswer.length() ; x++){
                 if(answer.charAt(x) == secondAnswer.charAt(x)){
                     points++;
                 }
             }
         }
         else if(answer.charAt(0) == '6') {
-            for(int x =0; x < answer.length() ; x++){
+            for(int x =0; x < answer.length() && x < thirdAnswer.length() ; x++){
                 if(answer.charAt(x) == thirdAnswer.charAt(x)){
                     points++;
                 }
@@ -335,6 +335,7 @@ public class patternDraw extends Activity implements View.OnClickListener {
         else {
             points =0;
         }
+
         /*
         else if(stringBuilder.toString().equals("5K") ||stringBuilder.toString().equals("L7") || stringBuilder.toString().equals("6L")){
             points =1;
