@@ -144,7 +144,7 @@ public class PrimaryColor extends ActionBarActivity implements View.OnClickListe
             answerButtons.get(i-1).setOnClickListener(this);
         }
 
-        buttonsLayout = (LinearLayout) findViewById(R.id.color_button_layout);
+        buttonsLayout = (LinearLayout) findViewById(R.id.primary_button_layout);
         buttonsLayout.setVisibility(View.INVISIBLE);
 
 

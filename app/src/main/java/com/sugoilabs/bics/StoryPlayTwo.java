@@ -184,7 +184,7 @@ public class StoryPlayTwo extends ActionBarActivity implements View.OnClickListe
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
             setWordNumberText(2);
-            start.setClickable(false);
+            start.setClickable(true);
         }
 
         //Not being called

@@ -22,4 +22,5 @@
     <string name="delayed_story_recall_new">Delayed Auditory Story Recall</string>
     <string name="visual_motor_coordination_new">Disinhibition V Tap</string>
     <string name="auditory_delayed_recall_new">Delayed Auditory Word Recall</string>
+    <string name="visualNumberRecallInstruction">Remember the combinations of the numbers will be displayed for 10 second. Type or speak the same number. Next</string>
 </resources>

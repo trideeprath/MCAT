@@ -175,7 +175,7 @@ public class ReverseNumberRecall extends ActionBarActivity implements View.OnCli
         }
         if(view.getId() == R.id.number_recall_done){
 
-           //if(mediaStatusTextView.getText().toString().matches("[0-9]+") ) {
+           if(mediaStatusTextView.getText().toString().matches("[0-9]+") ) {
                 if(audioPlayedCount < numbersArrayList.size()) {
                     //start.setVisibility(View.VISIBLE);
 
@@ -208,11 +208,11 @@ public class ReverseNumberRecall extends ActionBarActivity implements View.OnCli
 
                 }
 
-            //}
+            }
 
-        /*else {
+        else {
             Toast.makeText(this, "Please enter a valid number",Toast.LENGTH_SHORT).show();
-        }*/
+        }
 
         }
 

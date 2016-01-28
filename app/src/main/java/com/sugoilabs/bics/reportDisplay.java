@@ -139,7 +139,7 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
 
         Log.d("ReportString", reportString.toString());
 
-        String reportStringNew = name + "\n"+ dateString + "\n" + printMap(immediateVisualRecall,1) + "\n" + printMap(immediateAuditoryRecall,2)+ "\n" +printMap(delayedRecall,3) + "\n" +printMap(disinhibition,4)+
+        String reportStringNew ="Name: "+ name + "\n"+ "Date: "+  dateString + "\n" + printMap(immediateVisualRecall,1) + "\n" + printMap(immediateAuditoryRecall,2)+ "\n" +printMap(delayedRecall,3) + "\n" +printMap(disinhibition,4)+
                 "\n" + printMap(attentionAndExecutive,5) +  "\n" + printMap(semanticOrLanguage,6) + "\n" + printMap(numberRecall,7);
 
         Log.d("ReportStringNew", reportStringNew);
@@ -451,10 +451,10 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
             emailContent = emailContent.replace("Pre-Concussion Injury",name);
             String report= reportDate.getText().toString().replace("Pre-Concussion Injury", name);
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{""});
-            email.putExtra(Intent.EXTRA_SUBJECT, "MCT Report");
+            email.putExtra(Intent.EXTRA_SUBJECT, "DMAC Report");
 
             //email.putExtra(Intent.EXTRA_TEXT, reportDate.getText().toString()+"\n" +finalReportTextView.getText().toString());
-            email.putExtra(Intent.EXTRA_TEXT, report+"\n" + "Mobile Cognitive Assessment Test" + "\n" + emailContent);
+            email.putExtra(Intent.EXTRA_TEXT, report+"\n" + "Dynamic Mobile Assessement of Cognition" + "\n" + emailContent);
             email.setType("message/rfc822");
             startActivity(Intent.createChooser(email, "Choose an Email client :"));
         }
