@@ -147,11 +147,15 @@
     <string name="delayedRecallStoryTwoInstructionNew">Please try to recall the story 2 in same words as much as possible. Examiner, please take the tablet to enter the story2 in words.</string>
 
 
-
     <string name="story_one_string">John,neighbour,Robert,vacation home,other month,white dog,golf club,laptop,plenty,cigar,every other,visit</string>
     <string name="story_two_string">Mary,loaned,lawnmower,shovel,weed spray,gloves,nephew,last year,returned,loan,anything,decided</string>
     <string name="story_three_string">John Hampton,New York,Greece,six days,friends,Christmas,vacation,4 pairs clothes,Camera,black jacket,airport,pair of gloves</string>
     <string name="story_four_string">Rosetta Johnson,Manager,coworker,mandatory,evacuation,category 4 storm,48 hours,packed clothes,medicine,2 dogs,car,followed,route</string>
+
+    <string name="story_victory">911,commemorates,victory,evil of society,2966,innocent souls,343,firefighters,terrorism,fail intelligence,vigilance,safer airline</string>
+    <string name="story_christmas">christmas,vacation,Carter,road trip,LasVegas,visit,Antelope canyon,Grand canyon,Navajo reservation,snow ski,snow bowl,flagstaff</string>
+    <string name="story_greatbarrier">great barrier reef,world\'s largest,coral reef,2900,individual reefs,900 islands,stretching,1400 miles,located,Coral Sea,Queensland,Australlia</string>
+    <string name="story_caleb">12 year old,Caleb\'s,first day,middle school,eventual,his teacher,neighbor,Johnson,Ron and Dale,lunch box,slipped,restroom</string>
 
     <string name="title_activity_user_detail_form">UserDetailForm</string>
     <string name="title_activity_picture_flash_answer_immediate_tab">PictureFlashAnswerImmediateTab</string>

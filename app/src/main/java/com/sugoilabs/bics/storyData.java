@@ -25,7 +25,7 @@ public class storyData {
 
     public static void setStoryArray(){
         Random rand = new Random();
-        set = rand.nextInt(2);
+        set = rand.nextInt(4);
         Log.d("story set", String.valueOf(set));
         storyArray.clear();
         answerStringArray.clear();
@@ -46,6 +46,25 @@ public class storyData {
                 //answerStringArray = context.getString(R.string.base_word_audio_flash_answer2);
                 //set = 1;
                 break;
+
+            case 2:
+                storyArray.add(R.raw.story_victory);
+                storyArray.add(R.raw.story_christmas);
+                answerStringArray.add(context.getResources().getString(R.string.story_victory));
+                answerStringArray.add(context.getResources().getString(R.string.story_christmas));
+                //answerStringArray = context.getString(R.string.base_word_audio_flash_answer2);
+                //set = 1;
+                break;
+
+            case 3:
+                storyArray.add(R.raw.story_greatbarrier);
+                storyArray.add(R.raw.story_caleb);
+                answerStringArray.add(context.getResources().getString(R.string.story_greatbarrier));
+                answerStringArray.add(context.getResources().getString(R.string.story_caleb));
+                //answerStringArray = context.getString(R.string.base_word_audio_flash_answer2);
+                //set = 1;
+                break;
+
 
 
         }

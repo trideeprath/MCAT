@@ -121,9 +121,6 @@ public class ImmediateRecallStoryTwo extends ActionBarActivity implements View.O
             int score = storyOneScore + calculateScoreByWords(sentence1, 2);
             Log.d("score", String.valueOf(score));
             saveToSharedPreference(score);
-            //startActivity(new Intent(this, patternDraw.class));
-            //startActivity(new Intent(this, WordAudioFlash.class));
-            //startActivity(new Intent(this , SimilarPicture.class));
 
             // original flow
             startActivity(new Intent(this, patternDraw.class));
