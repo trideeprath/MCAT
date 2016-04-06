@@ -386,11 +386,12 @@ public class reportDisplay extends ActionBarActivity implements View.OnClickList
         protected void onPreExecute() {
             showToast();
         }
+
         @Override
         protected String doInBackground(List<NameValuePair>... loginDetail) {
             AndroidHttpClient client = AndroidHttpClient.newInstance("AndroidAgent");
             //HttpPost httpPost = new HttpPost("http://planourmeet.herokuapp.com/register");
-            HttpPost httpPost = new HttpPost("http://regainmemory.org/ws-mct/index.php?menu=insert_mct_info");
+            HttpPost httpPost = new HttpPost("https://regainmemory.org/ws-mct/index.php?menu=insert_mct_info");
             Log.d("background", "inBackground start");
             HttpResponse response;
             try {

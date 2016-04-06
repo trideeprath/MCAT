@@ -234,7 +234,7 @@ public class Registration extends ActionBarActivity implements View.OnClickListe
         protected String doInBackground(List<NameValuePair>... loginDetail) {
             AndroidHttpClient client = AndroidHttpClient.newInstance("AndroidAgent");
             //HttpPost httpPost = new HttpPost("http://planourmeet.herokuapp.com/register");
-            HttpPost httpPost = new HttpPost("http://regainmemory.org/bics/registration/index.php");
+            HttpPost httpPost = new HttpPost("https://regainmemory.org/bics/registration/index.php");
             Log.d("background", "inBackground start");
             HttpResponse response;
             try {
